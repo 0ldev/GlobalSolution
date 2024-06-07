@@ -1,6 +1,6 @@
 Controle de Servo para automatizar lixeira e Sensor de Força para pesar o lixo
 
-Este é um código Arduino para controlar um servo motor e monitorar um sensor de força. O servo motor é controlado por um botão para utilizar o lixo e o sensor de força monitora o peso do lixo.
+Este é um código em C++ Arduino para controlar um servo motor e monitorar um sensor de força. O servo motor é controlado por um botão para utilizar o lixo e o sensor de força monitora o peso do lixo.
 
 Componentes Utilizados:
 
