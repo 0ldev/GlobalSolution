@@ -1,0 +1,62 @@
+#include "LiquidCrystal.h"
+LiquidCrystal lcd(8,7,6,5,4,3);
+
+#include <Servo.h>
+Servo myServo;
+
+int Force_VAL = 0;
+
+int estadoBotao;
+int posicaoServo = 0; 
+int button = 13, pinServo = 9;
+
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  lcd.begin(16,2);
+  
+  lcd.setCursor(0,0);
+  lcd.print("Force Sensor VALUE");
+
+  pinMode(11, OUTPUT);
+
+  pinMode(button, INPUT);	  
+  myServo.attach(pinServo);  
+}
+
+void loop()
+{
+  estadoBotao = digitalRead(button); 
+  if (estadoBotao == HIGH) { 
+    delay(50);
+    if (digitalRead(button) == HIGH) {
+      if (posicaoServo == 0) {
+        posicaoServo = 90; 
+      } else {
+        posicaoServo = 0; 
+      }
+      myServo.write(posicaoServo); 
+    }
+}
+delay(500);
+
+  
+  Force_VAL = analogRead(A0);
+  Serial.println(Force_VAL);
+  
+  lcd.setCursor(0,1);
+  lcd.print(Force_VAL);
+
+ if (Force_VAL > 912)
+ {
+    digitalWrite(11, HIGH);
+  } 
+else
+ {
+    digitalWrite(11, LOW);
+  }
+  
+  delay(10);
+}
