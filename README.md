@@ -30,6 +30,8 @@ Funcionamento:
 O servo motor é controlado por um botão. Pressionar o botão move o servo para a posição de 90 graus, e pressioná-lo novamente o retorna à posição inicial (0 grau).
 O sensor de força é monitorado continuamente.
 
+Link para simulador: https://www.tinkercad.com/things/5cfqWNjffNS-oceano?sharecode=kK0wyX4Ac9VvmwLrs_Axa1PVl3aLEArOT-53AD8XlfQ
+
 Turma: ESPV1
 Stephany Borzi Marques (RM:557351)
 Albert Katri (RM556544)
